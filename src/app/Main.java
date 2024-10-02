@@ -20,8 +20,9 @@ public class Main {
     }
 
     public static void getOutput(String output) {
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
-        Date date = new Date();
-        System.out.println("Ваш запрос был создан: " + format.format(date) + "\n" + output);
+        SimpleDateFormat formater = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        String formatted = String.format("Ваш запрос был создан: %s, \n%s", formater.format(new Date()), output);
+        System.out.println(formatted);
+
     }
 }
